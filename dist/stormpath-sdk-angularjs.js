@@ -2415,13 +2415,14 @@ function StormpathOAuthTokenProvider(STORMPATH_CONFIG) {
           if (!tokenType || !accessToken) {
             return $q.reject();
           }
-
+          /*
           if (new Date() >= new Date(token.exp)) {
             var StormpathOAuth = $injector.get('StormpathOAuth');
             return StormpathOAuth.refresh().then(function(){
               return self.getAccessToken();
             });
           }
+          */
 
           return accessToken;
         });
